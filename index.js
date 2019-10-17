@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
+app.set('view engine','pug');
 
 app.get("/",(req,res) => {
-    res.send("hello word!");
+    res.render('template', {title : 'proofToNight',message : 'Nessun Dorma!'});
 });
 
 app.listen(3000,() => {
